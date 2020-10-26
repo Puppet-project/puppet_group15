@@ -4,7 +4,7 @@
 
 class profile::base_linux {
 
-  $root_ssh_key = lookup('base_linux::root_ssh_key')
+  $root_ssh_key = [lookup('base_linux::gjert_ssh_key'), lookup('base_linux::erlend_ssh_key'), lookup('base_linux::christian_ssh_key')]
   $linux_sw_pkg = lookup('base_linux::linux_sw_pkg')
 
 # careful when configuring ntp to avoid misuse (opening for DDOS)
