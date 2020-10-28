@@ -1,4 +1,4 @@
-class{'metricbeat':
+class profile::beats::metricbeat:{
   modules => [
     {
       'module'     => 'system',
@@ -7,6 +7,8 @@ class{'metricbeat':
         'load',
         'memory',
         'process',
+        'uptime',
+        'diskio'
       ],
       'processes'  => ['.*'],
     },
