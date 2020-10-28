@@ -56,3 +56,5 @@ mod 'dalen-dnsquery',         '3.0.0'
 # Updates
 mod 'puppet-unattended_upgrades', '4.0.0'
 
+# ELK stack
+mod 'elastic-elastic_stack', '7.0.0'
