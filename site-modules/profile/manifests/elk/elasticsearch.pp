@@ -3,7 +3,6 @@ class profile::elk::elasticsearch {
 
   class { 'elasticsearch':
   restart_on_change => true,
-  ensure => running,
   }
   
   elasticsearch::instance { 'elk1': }
