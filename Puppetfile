@@ -58,3 +58,6 @@ mod 'puppet-unattended_upgrades', '4.0.0'
 
 # ELK stack
 mod 'elastic-elastic_stack', '7.0.0'
+
+# Metricbeat 
+mod 'coreyh-metricbeat', '0.4.1'
