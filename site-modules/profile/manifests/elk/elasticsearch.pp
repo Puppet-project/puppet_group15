@@ -8,8 +8,6 @@ class profile::elk::elasticsearch {
   class { 'elasticsearch':
   restart_on_change => true,
   jvm_options       => [
-      '-Xms4000m',
-      '-Xmx4000m',
       '8:-XX:NumberOfGCLogFiles=32',
       '8:-XX:GCLogFileSize=64m',
       '8:-XX:+UseGCLogFileRotation',
