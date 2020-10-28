@@ -1,4 +1,4 @@
-class role::domain_joined_client {
+class role::windows_client {
   include ::profile::base_windows
   include ::profile::dns::client
   include ::profile::consul::client
