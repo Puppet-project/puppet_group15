@@ -1,4 +1,4 @@
-class profile::beats::metricbeat:{
+class profile::beats::metricbeat {
   modules => [
     {
       'module'     => 'system',
