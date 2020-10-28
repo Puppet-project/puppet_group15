@@ -60,6 +60,7 @@ mod 'puppet-unattended_upgrades', '4.0.0'
 mod 'elastic-elasticsearch', '6.4.0'
 mod 'elastic-kibana', '6.3.1'
 mod 'elastic-elastic_stack', '7.0.0'
+mod 'puppetlabs-java', '6.3.0'
 
 # Metricbeat 
 mod 'coreyh-metricbeat', '0.4.1'
