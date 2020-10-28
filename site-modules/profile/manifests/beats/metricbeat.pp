@@ -1,3 +1,5 @@
+#configuration for setting up metricbeat
+
 class profile::beats::metricbeat{
   class{'metricbeat':
     modules => [
@@ -21,4 +23,4 @@ class profile::beats::metricbeat{
       },
     },
   }
-} 
+}
