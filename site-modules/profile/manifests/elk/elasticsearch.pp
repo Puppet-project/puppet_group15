@@ -30,9 +30,7 @@ class profile::elk::elasticsearch {
     line => 'ES_PATH_CONF=/etc/elasticsearch/elk1',
 }
 
-  elasticsearch::instance { 'elk1':
-    ensure => running,
-  }
+  elasticsearch::instance { 'elk1':}
 }
 
 
