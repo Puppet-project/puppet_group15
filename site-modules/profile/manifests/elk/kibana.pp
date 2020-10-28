@@ -1,3 +1,5 @@
 
-class { 'kibana' : 
+class profile::elk::kibana {
+   class { 'kibana':
+  }
 }
