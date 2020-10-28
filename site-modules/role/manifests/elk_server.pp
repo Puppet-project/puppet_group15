@@ -5,4 +5,5 @@ class role::elk_server {
     include ::profile::consul::client
     include ::profile::sensu::agent_linux
     include ::profile::base_elk
+
 }
