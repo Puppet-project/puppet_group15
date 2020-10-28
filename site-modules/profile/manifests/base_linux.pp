@@ -4,9 +4,7 @@
 
 class profile::base_linux {
 
-  $gjert_ssh_key = lookup('base_linux::gjert_ssh_key')
-  $erlend_ssh_key = lookup('base_linux::erlend_ssh_key')
-  $christian_ssh_key = lookup('base_linux::christian_ssh_key')
+  $root_ssh_key = [lookup('base_linux::gjert_ssh_key'), lookup('base_linux::erlend_ssh_key'), lookup('base_linux::christian_ssh_key')]
   $linux_sw_pkg = lookup('base_linux::linux_sw_pkg')
 
 # careful when configuring ntp to avoid misuse (opening for DDOS)
@@ -33,24 +31,13 @@ class profile::base_linux {
     mode   => '0700',
     ensure => 'directory',
   }
-  ssh_authorized_key { 'gmhomb@loginstud03':
+  ssh_authorized_key { 'root@manager':
     user    => 'root',
     type    => 'ssh-rsa',
-    key     => $gjert_ssh_key,
+    key     => $root_ssh_key,
     require => File['/root/.ssh'],
   }
-  ssh_authorized_key { 'Generated-by-Nova':
-    user    => 'root',
-    type    => 'ssh-rsa',
-    key     => $erlend_ssh_key,
-    require => File['/root/.ssh'],
-  }
-    ssh_authorized_key { 'chrissis@loginstud03':
-    user    => 'root',
-    type    => 'ssh-rsa',
-    key     => $christian_ssh_key,
-    require => File['/root/.ssh'],
-  }
+
 # automatic updates
 
   include ::profile::secupd::linsec
