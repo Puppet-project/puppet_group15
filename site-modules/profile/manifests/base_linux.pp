@@ -54,7 +54,7 @@ class profile::base_linux {
 # automatic updates
 
   include ::profile::secupd::linsec
-  include ::profile::beats:metricbeat
+  include ::profile::beats::metricbeat
 
 }
 

@@ -29,9 +29,9 @@ class profile::dns::client {
         },
         netplan_apply => true,
       }
+
+
     }
     default: { notify { 'Which OS? WTF???': } }
   }
-
 }
-
