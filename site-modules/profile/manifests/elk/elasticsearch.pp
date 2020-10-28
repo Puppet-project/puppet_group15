@@ -25,12 +25,14 @@ class profile::elk::elasticsearch {
   }
 
   #fixes a bug where elastic cant find the conf file.
-#  file_line { 'path_conf':
-#    path => '/etc/default/elasticsearch',
-#    line => 'ES_PATH_CONF=/etc/elasticsearch/elk1',
-#}
+  file_line { 'path_conf':
+    path => '/etc/default/elasticsearch',
+    line => 'ES_PATH_CONF=/etc/elasticsearch/elk1',
+}
 
-  elasticsearch::instance { 'elk1':}
+  elasticsearch::instance { 'elk1':
+    ensure => running,
+  }
 }
 
 
