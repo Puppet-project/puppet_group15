@@ -1,3 +1,5 @@
+#configuration for consul clients
+
 class profile::consul::client {
 
   case $facts['os']['name'] {
@@ -6,16 +8,16 @@ class profile::consul::client {
       class { '::consul':
         version     => '1.6.2',
         config_hash => {
-          'datacenter'       => 'NTNU',
-          'log_level'        => 'INFO',
-          'node_name'        => $facts['hostname'],
-          'retry_join'       => [ $::serverip ],
+          'datacenter' => 'NTNU',
+          'log_level'  => 'INFO',
+          'node_name'  => $facts['hostname'],
+          'retry_join' => [ $::serverip ],
         },
       }
 
     }
 
-    /^(Debian|Ubuntu)$/: { 
+    /^(Debian|Ubuntu)$/: {
 
       package { 'unzip':
         ensure => latest,
@@ -24,11 +26,11 @@ class profile::consul::client {
       class { '::consul':
         version     => '1.6.2',
         config_hash => {
-          'data_dir'         => '/opt/consul',
-          'datacenter'       => 'NTNU',
-          'log_level'        => 'INFO',
-          'node_name'        => $facts['hostname'],
-          'retry_join'       => [ $::serverip ],
+          'data_dir'   => '/opt/consul',
+          'datacenter' => 'NTNU',
+          'log_level'  => 'INFO',
+          'node_name'  => $facts['hostname'],
+          'retry_join' => [ $::serverip ],
         },
         require     => Package['unzip'],
       }

@@ -1,3 +1,7 @@
+#  
+# Puppet code for configuring sensu on linux clients
+#
+
 class profile::sensu::agent_linux {
 
   class { 'sensu::agent':

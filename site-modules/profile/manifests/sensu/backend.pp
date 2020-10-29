@@ -1,3 +1,7 @@
+#  
+# Puppet code for backend of the sensu monitoring service
+#
+
 class profile::sensu::backend {
 
   class { 'sensu::backend':

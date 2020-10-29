@@ -1,3 +1,7 @@
+#  
+# role:server for all linux clients
+#
+
 class role::linux {
     include ::profile::base_linux
     include ::profile::dns::client

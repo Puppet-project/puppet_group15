@@ -56,3 +56,19 @@ mod 'dalen-dnsquery',         '3.0.0'
 # Updates
 mod 'puppet-unattended_upgrades', '4.0.0'
 
+
+# ELK stack
+mod 'camptocamp-augeas', '1.9.0'
+mod 'richardc-datacat', '0.6.2'
+mod 'puppetlabs-java_ks', '3.2.0'
+mod 'elastic-elasticsearch', '6.4.0'
+mod 'elastic-kibana', '6.3.1'
+mod 'elastic-elastic_stack', '7.0.0'
+mod 'puppetlabs-java', '6.3.0'
+mod 'puppet-yum', '4.3.0'
+
+# Metricbeat 
+mod 'coreyh-metricbeat', '0.4.1'
+
+# Winlogbeat
+mod 'puppet-winlogbeat', '1.0.0'

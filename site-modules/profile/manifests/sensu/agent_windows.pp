@@ -1,3 +1,7 @@
+#  
+# Puppet code for configuring sensu on windows clients
+#
+
 class profile::sensu::agent_windows {
 
   class { 'sensu::agent':

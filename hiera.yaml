@@ -19,4 +19,3 @@ hierarchy:
       dig_key: Node.__KEY__
       output: json
       failure: graceful
-

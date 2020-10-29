@@ -27,11 +27,11 @@ class profile::base_linux {
 
 # root@manager should be able to ssh without password to all
 
- file { '/root/.ssh':
+  file { '/root/.ssh':
+    ensure => 'directory',
     owner  => 'root',
     group  => 'root',
     mode   => '0700',
-    ensure => 'directory',
   }
   ssh_authorized_key { 'gmhomb@loginstud03':
     user    => 'root',
@@ -55,6 +55,7 @@ class profile::base_linux {
 # automatic updates
 
   include ::profile::secupd::linsec
+  #include ::profile::beats::metricbeat
 
 }
 

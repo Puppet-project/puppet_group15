@@ -1,3 +1,7 @@
+#  
+# role:directory server
+#
+
 class role::directory_server {
   include ::profile::base_linux
   include ::profile::dns::client
