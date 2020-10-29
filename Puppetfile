@@ -70,5 +70,5 @@ mod 'puppet-yum', '4.3.0'
 # Metricbeat 
 mod 'coreyh-metricbeat', '0.4.1'
 
-Winlogbeat
+# Winlogbeat
 mod 'puppet-winlogbeat', '1.0.0'
