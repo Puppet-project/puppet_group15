@@ -7,9 +7,9 @@ class profile::elk::elasticsearch {
 
   class { 'elasticsearch':
   restart_on_change => true,
-  config            => {
+  settings          => {
         'network.host' => '0.0.0.0'
-      }
+  },
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
 #  jvm_options             => [
 #      '8:-XX:NumberOfGCLogFiles=32',
