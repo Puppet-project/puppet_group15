@@ -6,7 +6,9 @@ class profile::elk::elasticsearch {
   include ::java
 
   class { 'elasticsearch':
-  restart_on_change => true,
+  restart_on_change       => true,
+  api_basic_auth_username => 'elastic',
+  api_basic_auth_password => 'changeme',
 
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
 #  jvm_options       => [
