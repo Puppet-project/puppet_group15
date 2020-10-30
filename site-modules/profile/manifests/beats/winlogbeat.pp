@@ -5,7 +5,7 @@ class profile::beats::winlogbeat{
     outputs => {
       'elasticsearch' => {
         'hosts' => [
-          'http://elasticsearch:9200'
+          'http://elk1:9200'
         ],
         'index'       => 'winlogbeat'
       },
