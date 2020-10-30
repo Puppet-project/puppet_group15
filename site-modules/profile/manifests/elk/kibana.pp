@@ -8,8 +8,6 @@ class profile::elk::kibana {
     'server.port'            => '8080',
     'server.host'            => '0.0.0.0',
     'xpack.security.enabled' => 'true',
-    'username'               => 'elastic',
-    'password'               => 'changeme',
     },
 
   }
