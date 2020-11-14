@@ -66,6 +66,7 @@ mod 'elastic-kibana', '6.3.1'
 mod 'elastic-elastic_stack', '7.0.0'
 mod 'puppetlabs-java', '6.3.0'
 mod 'puppet-yum', '4.3.0'
+mod 'elastic-logstash', '6.1.5'
 
 # Metricbeat 
 mod 'coreyh-metricbeat', '0.4.1'
