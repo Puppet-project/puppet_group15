@@ -18,8 +18,10 @@ class profile::beats::metricbeat{
     ],
     outputs => {
       'elasticsearch' => {
-        'hosts' => ['http://elk1:9200'],
-        'index' => 'metricbeat',
+        'hosts'    => ['http://elasticsearch:9200'],
+        'index'    => 'metricbeat',
+        'username' => 'elastic',
+        'password' => 'changeme',
       },
     },
   }
