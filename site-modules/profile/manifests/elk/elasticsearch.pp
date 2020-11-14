@@ -3,13 +3,14 @@
 #
 
 class profile::elk::elasticsearch {
-  include ::java
+  #include ::java
+  include elastic_stack::repo
 
   class { 'elasticsearch':
     restart_on_change => true,
-    #config            => {
-    #  'network.host' => '0.0.0.0'
-    #},
+    config            => {
+      'network.host' => '0.0.0.0'
+    },
   }
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
 #  jvm_options             => [
