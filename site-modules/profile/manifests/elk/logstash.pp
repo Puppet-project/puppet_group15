@@ -3,9 +3,11 @@
 #
 
 class profile::elk::logstash {
+  include ::logstash
+
   class { 'logstash':
   }
   logstash::configfile {'my_ls_config':
-    content => template('path/to/config.file'),
+    content => 'input { metricbeat {} } output { null {} }',
     }
 }
