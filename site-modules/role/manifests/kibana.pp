@@ -2,7 +2,7 @@
 # role:server for hosting kibana
 #
 
-class role::elk_server {
+class role::kibana {
     include ::profile::base_linux
     include ::profile::dns::client
     include ::profile::consul::client

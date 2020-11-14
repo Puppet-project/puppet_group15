@@ -3,7 +3,6 @@
 #
 
 class profile::elk::logstash {
-  include ::logstash
 
   class { 'logstash':
   }
