@@ -3,15 +3,15 @@ node default {
 }
 
 node /logstash/ {
-  include ::role::elk_server
+  include ::role::logstash
 }
 
 node /kibana/ {
-  include ::role::elk_server
+  include ::role::kibana
 }
 
 node /elasticsearch/ {
-  include ::role::elk_server
+  include ::role::elasticsearch
 }
 
 node /lin1/ {
