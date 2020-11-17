@@ -9,7 +9,8 @@ class profile::elk::elasticsearch {
   class { 'elasticsearch':
     restart_on_change => true,
     config            => {
-      'network.host'  => '0.0.0.0'
+      'network.host'         => '0.0.0.0',
+      'discovery.seed_hosts' => $facts[networking][ip]
     },
 
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
@@ -31,7 +32,7 @@ class profile::elk::elasticsearch {
   #fixes a bug where elastic cant find the conf file.
   file_line { 'path_conf':
     path => '/etc/default/elasticsearch',
-    line => 'ES_PATH_CONF=/etc/elasticsearch/elk1',
+    line => 'ES_PATH_CONF=/etc/elasticsearch/es-01',
   }
 
   elasticsearch::instance { 'es-01':}
