@@ -8,7 +8,7 @@ class profile::elk::elasticsearch {
 
   class { 'elasticsearch':
     restart_on_change => true,
-    security_plugin   => 'x-pack',
+    #security_plugin   => 'x-pack',
     config            => {
       'network.host'                         => '0.0.0.0',
       'discovery.seed_hosts'                 => $facts[networking][ip],
