@@ -21,7 +21,7 @@ class profile::beats::metricbeat{
         'hosts'    => ['http://elasticsearch:9200'],
         'index'    => 'metricbeat',
         'username' => 'elastic',
-        'password' => 'changeme',
+        'password' => 'password',
       },
     },
   }
