@@ -8,15 +8,10 @@ class profile::elk::elasticsearch {
 
   class { 'elasticsearch':
     restart_on_change => true,
-    #security_plugin   => 'x-pack',
     config            => {
-      'network.host'                         => '0.0.0.0',
-      'discovery.seed_hosts'                 => $facts[networking][ip],
-      'discovery.type'                       => 'single-node',
-      #'xpack.security.enabled'               => true,
-      #'xpack.security.authc.api_key.enabled' => true,
-    'elasticsearch.password'                 => 'elastic',
-    'elasticsearch.username'                 => 'password',
+      'network.host'         => '0.0.0.0',
+      'discovery.seed_hosts' => $facts[networking][ip],
+      'discovery.type'       => 'single-node',
     },
 
 
@@ -42,22 +37,8 @@ class profile::elk::elasticsearch {
     line => 'ES_PATH_CONF=/etc/elasticsearch/es-01',
   }
 
-  #elasticsearch::role { 'myrole':
-  #  privileges => {
-  #  'cluster' => [ 'monitor' ],
-  #  'indices' => [{
-  #    'names'      => [ '*' ],
-  #    'privileges' => [ 'read' ],
-  #    }]
-  #  }
-  #}
-#
-  #elasticsearch::user { 'elastic':
-  #  password => 'password',
-  #}
 
   elasticsearch::instance { 'es-01':}
-  #elasticsearch::plugin { 'x-pack': instances => 'es-01' }
 }
 
 
