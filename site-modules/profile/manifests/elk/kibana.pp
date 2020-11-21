@@ -10,8 +10,8 @@ class profile::elk::kibana {
     'xpack.security.enabled'      => true,
     'elasticsearch.hosts'         => ['http://elasticsearch:9200'],
     'xpack.ingestManager.enabled' => true,
-    'elasticsearch.password'      => 'elastic',
-    'elasticsearch.username'      => 'password',
+    'elasticsearch.password'      => 'password',
+    'elasticsearch.username'      => 'elastic',
     },
 
   }
