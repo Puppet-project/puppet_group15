@@ -4,10 +4,10 @@ class profile::beats::filebeat{
   class { 'filebeat':
   outputs => {
     'logstash' => {
-    'hosts'       => [
+    'hosts'   => [
       'logstash:5044',
     ],
-    'loadbalance' => true,
+    'enabled' => true,
     },
   },
   }
