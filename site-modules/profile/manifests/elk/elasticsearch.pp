@@ -13,7 +13,7 @@ class profile::elk::elasticsearch {
       'discovery.seed_hosts'                 => $facts[networking][ip],
       'discovery.type'                       => 'single-node',
       'xpack.security.enabled'               => true,
-      'xpack.security.authc.api_key.enabled' => true,
+      #'xpack.security.authc.api_key.enabled' => true,
     },
 
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
