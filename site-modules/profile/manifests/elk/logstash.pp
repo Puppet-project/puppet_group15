@@ -3,6 +3,7 @@
 #
 
 class profile::elk::logstash {
+  require java
 
   class { 'logstash':
     #fixes a problem where logstart wont start
