@@ -16,6 +16,8 @@ class profile::elk::elasticsearch {
       #'xpack.security.authc.api_key.enabled' => true,
     },
 
+
+
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
   jvm_options         => [
       '8:-XX:NumberOfGCLogFiles=32',
@@ -36,6 +38,10 @@ class profile::elk::elasticsearch {
   file_line { 'path_conf':
     path => '/etc/default/elasticsearch',
     line => 'ES_PATH_CONF=/etc/elasticsearch/es-01',
+  }
+
+  elasticsearch::user { 'elastic':
+    password => 'password',
   }
 
   elasticsearch::instance { 'es-01':}
