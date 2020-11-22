@@ -40,6 +40,3 @@ class profile::elk::elasticsearch {
 
   elasticsearch::instance { 'es-01':}
 }
-
-
-
