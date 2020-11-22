@@ -4,6 +4,7 @@
 
 class profile::base_linux {
 
+  $root_ssh_key = lookup('base_linux::root_ssh_key')
   $gjert_ssh_key = lookup('base_linux::gjert_ssh_key')
   $erlend_ssh_key = lookup('base_linux::erlend_ssh_key')
   $christian_ssh_key = lookup('base_linux::christian_ssh_key')
@@ -51,11 +52,16 @@ class profile::base_linux {
     key     => $christian_ssh_key,
     require => File['/root/.ssh'],
   }
-
+  ssh_authorized_key { 'root@manager':
+    user    => 'root',
+    type    => 'ssh-rsa',
+    key     => $root_ssh_key,
+    require => File['/root/.ssh'],
+  }
 # automatic updates
 
   include ::profile::secupd::linsec
-  #include ::profile::beats::metricbeat
+  include ::profile::beats::filebeat
 
 }
 

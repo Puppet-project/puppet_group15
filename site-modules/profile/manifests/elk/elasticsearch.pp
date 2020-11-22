@@ -3,13 +3,20 @@
 #
 
 class profile::elk::elasticsearch {
-  include ::java
+  #include ::java
+  include elastic_stack::repo
 
   class { 'elasticsearch':
-  restart_on_change => true,
+    restart_on_change => true,
+    config            => {
+      'network.host'         => '0.0.0.0',
+      'discovery.seed_hosts' => $facts[networking][ip],
+      'discovery.type'       => 'single-node',
+    },
+
 
   #elasticsearch dont work properly on jdk11. This removes deprecated functions
-  jvm_options       => [
+  jvm_options         => [
       '8:-XX:NumberOfGCLogFiles=32',
       '8:-XX:GCLogFileSize=64m',
       '8:-XX:+UseGCLogFileRotation',
@@ -25,12 +32,13 @@ class profile::elk::elasticsearch {
   }
 
   #fixes a bug where elastic cant find the conf file.
-#  file_line { 'path_conf':
-#    path => '/etc/default/elasticsearch',
-#    line => 'ES_PATH_CONF=/etc/elasticsearch/elk1',
-#}
+  file_line { 'path_conf':
+    path => '/etc/default/elasticsearch',
+    line => 'ES_PATH_CONF=/etc/elasticsearch/es-01',
+  }
 
-  elasticsearch::instance { 'elk1':}
+
+  elasticsearch::instance { 'es-01':}
 }
 
 

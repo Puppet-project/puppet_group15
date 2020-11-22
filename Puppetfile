@@ -35,6 +35,8 @@ mod 'puppetlabs-translate',   '2.0.0'
 mod 'saz-timezone',           '3.4.0'
 mod 'stm-debconf',            '2.3.0'
 mod 'zehweh-netplan',         '0.1.9'
+mod 'puppetlabs-yumrepo_core', '1.0.7'
+
 
 mod 'dns',
   git:    'https://github.com/ppouliot/puppet-dns',
@@ -66,9 +68,10 @@ mod 'elastic-kibana', '6.3.1'
 mod 'elastic-elastic_stack', '7.0.0'
 mod 'puppetlabs-java', '6.3.0'
 mod 'puppet-yum', '4.3.0'
+mod 'elastic-logstash', '6.1.5'
 
-# Metricbeat 
+# beats
 mod 'coreyh-metricbeat', '0.4.1'
-
-# Winlogbeat
 mod 'puppet-winlogbeat', '1.0.0'
+mod 'pcfens-filebeat', '4.8.0'
+

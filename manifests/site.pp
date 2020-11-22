@@ -2,8 +2,16 @@ node default {
   notify { "Oops Default! I'm ${facts['hostname']}": }
 }
 
-node /elk1/ {
-  include ::role::elk_server
+node /logstash/ {
+  include ::role::logstash
+}
+
+node /kibana/ {
+  include ::role::kibana
+}
+
+node /elasticsearch/ {
+  include ::role::elasticsearch
 }
 
 node /lin1/ {

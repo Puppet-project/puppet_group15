@@ -1,11 +1,11 @@
 #  
-# role:server for all linux clients
+# role:server for hosting logstash
 #
 
-class role::linux {
+class role::logstash {
     include ::profile::base_linux
     include ::profile::dns::client
     include ::profile::consul::client
     include ::profile::sensu::agent_linux
-    include ::profile::beats::metricbeat
+    include ::profile::elk::logstash
 }
