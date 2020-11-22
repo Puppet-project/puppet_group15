@@ -36,6 +36,9 @@ mod 'saz-timezone',           '3.4.0'
 mod 'stm-debconf',            '2.3.0'
 mod 'zehweh-netplan',         '0.1.9'
 mod 'puppetlabs-yumrepo_core', '1.0.7'
+mod 'lwf-remote_file',        '1.1.3'
+
+
 
 
 mod 'dns',
