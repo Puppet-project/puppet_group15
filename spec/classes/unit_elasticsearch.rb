@@ -20,7 +20,7 @@ on_supported_os.each do |os, os_facts|
 
   describe 'elasticsearch' do
     let(:params) { {'restart_on_change' => true} }
-    it { should contain_file(’/etc/elasticsearch/es-01/elasticsearch.yml’).with( 
+    it { is_expected.to contain_file(’/etc/elasticsearch/es-01/elasticsearch.yml’).with( 
       'discovery.seed_hosts' => $facts[networking][ip], 
       'discovery.type' => 'single-node',
       'network.host'   => '0.0.0.0',
