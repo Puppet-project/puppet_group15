@@ -1,4 +1,6 @@
+#
 #configuration for setting up filebeat
+#
 
 class profile::beats::filebeat{
   class { 'filebeat':

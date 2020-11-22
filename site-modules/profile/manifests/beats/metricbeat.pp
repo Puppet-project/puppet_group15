@@ -1,4 +1,6 @@
+#
 #configuration for setting up metricbeat
+#
 
 class profile::beats::metricbeat{
   class{'metricbeat':
