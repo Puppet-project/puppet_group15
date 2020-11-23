@@ -3,7 +3,7 @@
 #
 
 class profile::beats::metricbeat{
-  class{'metricbeat':
+  class { 'metricbeat':
     modules => [
       {
         'module'     => 'system',
@@ -19,12 +19,10 @@ class profile::beats::metricbeat{
       },
     ],
     outputs => {
-      'elasticsearch' => {
-        'hosts'    => ['http://elasticsearch:9200'],
-        'index'    => 'metricbeat',
-        'username' => 'elastic',
-        'password' => 'password',
+      'logstash' => {
+        'hosts'    => ['logstash:5044'],
       },
+      'enabled' => true,
     },
   }
 }
