@@ -4,7 +4,7 @@
 
 class profile::beats::metricbeat{
   class {'metricbeat':
-  'major_version'  => '6',
+    major_version  => '7',
     modules => [
       {
         'module'     => 'system',
