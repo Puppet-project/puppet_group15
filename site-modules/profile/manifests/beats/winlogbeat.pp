@@ -9,13 +9,11 @@ class profile::beats::winlogbeat{
         'hosts' => [ 'http://logstash:5044' ],
         'index' => 'winlogbeat',
       },
-      winlogbeat => {
-        'event_logs' => [
-        'name'       => 'Application',
-        'name'       => 'Security',
-        'name'       => 'System',
-        ]
-      }
+    event_logs   => {
+        'Security' => {
+        'ignore_older' => '72h',
+        },
+      },
     },
   }
 }
