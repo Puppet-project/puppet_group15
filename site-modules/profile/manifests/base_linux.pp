@@ -62,6 +62,7 @@ class profile::base_linux {
 
   include ::profile::secupd::linsec
   include ::profile::beats::filebeat
+  include ::profile::beats::metricbeat
 
 }
 
