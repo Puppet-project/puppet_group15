@@ -17,9 +17,9 @@ on_supported_os.each do |os, os_facts|
                  'logstash:5044',   
               ],
               'enabled' => 'true',
-            }
+            },
           )}
       end
     end
   end
-end    
+end
