@@ -4,6 +4,7 @@
 
 class profile::beats::metricbeat{
   class {'metricbeat':
+    max_start_delay => '10s',
     major_version  => '7',
     modules => [
       {
