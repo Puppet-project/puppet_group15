@@ -1,4 +1,4 @@
-#
+  #
 #configuration for setting up winlogbeat
 #
 
@@ -8,9 +8,10 @@ class profile::beats::winlogbeat{
       'logstash' => {
         'hosts' => [ 'http://logstash:5044' ],
         'index' => 'winlogbeat',
-      },
-    event_logs   => {
+    },
+    event_logs => {
         'Security' => {
+        'event_id' => $events, 
         'ignore_older' => '72h',
         },
       },
