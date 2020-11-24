@@ -4,7 +4,6 @@
 
 class profile::beats::metricbeat{
   class {'metricbeat':
-    max_start_delay => '10s',
     major_version  => '7',
     modules => [
       {
@@ -19,24 +18,12 @@ class profile::beats::metricbeat{
         ],
         'processes'  => ['.*'],
       },
-      {
-        'module'    => 'windows',
-        'metricsets'=> 'perfmon',
-        'enabled'   => 'true',
-        'perfmon.queries' => [
-          'counters' => [
-            'name'  => "% Processor time",
-            'field' => 'time.processor.pct',
-            'format'=> 'float'
-          ]
-        ]
-      }
     ],
     outputs => {
       'logstash' => {
-      'hosts'    => ['logstash:5044'],
+        'hosts'    => ['logstash:5044'],
       },
       'enabled' => true,
-    },
+    }
   }
 }
