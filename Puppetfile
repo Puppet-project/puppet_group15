@@ -75,6 +75,6 @@ mod 'elastic-logstash', '6.1.5'
 
 # beats
 mod 'coreyh-metricbeat', '0.4.1'
-mod 'puppet-winlogbeat', '1.0.0'
+mod 'puppet-winlogbeat', '0.2.2'
 mod 'pcfens-filebeat', '4.8.0'
 
