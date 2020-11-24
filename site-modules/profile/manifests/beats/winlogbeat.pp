@@ -8,12 +8,8 @@ class profile::beats::winlogbeat{
       'logstash' => {
         'hosts' => [ 'http://logstash:5044' ],
         'index' => 'winlogbeat',
-      },
-    event_logs   => {
-        'Security' => {
-        'ignore_older' => '72h',
-        },
-      },
+      }
     },
+    config_file => 'C:\ProgramData\PuppetLabs\code\environments\production\data\winlogbeat.yml',
   }
 }
