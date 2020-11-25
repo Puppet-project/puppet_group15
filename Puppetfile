@@ -79,8 +79,7 @@ mod 'elastic-logstash', '6.1.5'
 # beats
 mod 'coreyh-metricbeat', '0.4.1'
 mod 'winlogbeat',
-  git: 'https://github.com/Puppet-project/puppet-winlogbeat.git',
-  commit: '1ec9cfa2becf005900851cc35aa8d14c0e3fd639'
+  git: 'https://github.com/Puppet-project/puppet-winlogbeat.git'
 mod 'pcfens-filebeat', '4.8.0'
 
 
