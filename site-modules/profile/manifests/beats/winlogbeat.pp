@@ -10,6 +10,6 @@ class profile::beats::winlogbeat{
         'index' => 'winlogbeat',
       }
     },
-    config_file => 'C:\ProgramData\PuppetLabs\code\environments\production\data\winlogbeat.yml',
+    config_file => 'C:\Program Files\winlogbeat\winlogbeat.yml',
   }
 }
