@@ -4,4 +4,4 @@ winlogbeat.event_logs:
   - name: System
 
 output.logstash:
-    hosts: ["logstash:5044"]
+    hosts: ["10.212.142.103:5044"]
