@@ -8,8 +8,8 @@ class profile::beats::winlogbeat{
       'logstash' => {
         'hosts' => [ 'http://logstash:5044' ],
         'index' => 'winlogbeat',
-      }
+      },
+    conf_template => 'C:\Program files\winlogbeat\winlogbeat.yml'
     },
-    config_file => 'C:\Program Files\winlogbeat\winlogbeat.yml',
   }
 }
