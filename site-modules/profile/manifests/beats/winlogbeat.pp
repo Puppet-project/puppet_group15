@@ -4,6 +4,7 @@
 
 class profile::beats::winlogbeat{
   class {'winlogbeat':
+    major_version  => '4',
     outputs => {
       'logstash' => {
         'hosts' => [ 'http://logstash:5044' ],
