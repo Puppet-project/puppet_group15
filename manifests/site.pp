@@ -18,12 +18,8 @@ node /lin1/ {
   include ::role::linux
 }
 
-node /winc1/ {
+node /win/ {
   include ::role::windows_client
-}
-
-node /wins1/ {
-  include ::role::windows_server
 }
 
 node 'manager.node.consul' {

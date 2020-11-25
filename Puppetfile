@@ -35,7 +35,13 @@ mod 'puppetlabs-translate',   '2.0.0'
 mod 'saz-timezone',           '3.4.0'
 mod 'stm-debconf',            '2.3.0'
 mod 'zehweh-netplan',         '0.1.9'
-mod 'puppetlabs-yumrepo_core', '1.0.7'
+mod 'puppetlabs-yumrepo_core','1.0.7'
+mod 'lwf-remote_file',        '1.1.3'
+mod 'puppet-zypprepo',        '3.0.0'
+mod 'puppetlabs-pwshlib',     '0.5.1'
+
+
+
 
 
 mod 'dns',
@@ -72,6 +78,8 @@ mod 'elastic-logstash', '6.1.5'
 
 # beats
 mod 'coreyh-metricbeat', '0.4.1'
-mod 'puppet-winlogbeat', '1.0.0'
+mod 'winlogbeat',
+  git: 'https://github.com/Puppet-project/puppet-winlogbeat.git'
 mod 'pcfens-filebeat', '4.8.0'
+
 

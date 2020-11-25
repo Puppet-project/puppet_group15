@@ -15,6 +15,6 @@ class profile::elk::logstash {
     ],
   }
   logstash::configfile {'my_ls_config':
-    content => template('/etc/puppetlabs/code/environments/dev/data/logstash.conf'),
+    content => template('/etc/puppetlabs/code/environments/production/data/logstash.conf'),
     }
 }

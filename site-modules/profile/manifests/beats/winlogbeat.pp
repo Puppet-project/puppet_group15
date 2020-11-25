@@ -1,16 +1,15 @@
 #
-#configuration for setting up metricbeat
+#configuration for setting up winlogbeat
 #
 
 class profile::beats::winlogbeat{
   class {'winlogbeat':
     outputs => {
-      'elasticsearch' => {
-        'hosts'    => [ 'http://elasticsearch:9200' ],
-        'index'    => 'winlogbeat',
-        'username' => 'elastic',
-        'password' => 'changeme',
+      'logstash'  => {
+        'hosts' => [ 'http://logstash:5044' ],
+        'index' => 'winlogbeat',
       },
+    conf_template => 'C:\ProgramData\PuppetLabs\code\environments\production\data\winlogbeat.yml'
     },
   }
 }
