@@ -40,6 +40,4 @@ class profile::base_windows {
 # automatic updates
   include ::profile::secupd::winsec
   include ::profile::beats::winlogbeat
-
 }
-

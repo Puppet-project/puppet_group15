@@ -21,9 +21,9 @@ class profile::beats::metricbeat{
     ],
     outputs => {
       'logstash' => {
-      'hosts'    => ['logstash:5044'],
+        'hosts'    => ['logstash:5044'],
       },
       'enabled' => true,
-    },
+    }
   }
 }
