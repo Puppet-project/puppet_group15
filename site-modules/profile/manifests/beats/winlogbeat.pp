@@ -9,7 +9,7 @@ class profile::beats::winlogbeat{
         'hosts' => [ 'http://logstash:5044' ],
         'index' => 'winlogbeat',
       },
-    conf_template => 'C:\Program files\winlogbeat\winlogbeat.yml'
+    conf_template => 'C:\ProgramData\PuppetLabs\code\environments\dev\data\winlogbeat.yml'
     },
   }
 }
