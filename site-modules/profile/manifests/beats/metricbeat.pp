@@ -4,8 +4,8 @@
 
 class profile::beats::metricbeat{
   class {'metricbeat':
-    major_version  => '7',
-    modules => [
+    major_version => '7',
+    modules       => [
       {
         'module'     => 'system',
         'metricsets' => [
@@ -19,11 +19,11 @@ class profile::beats::metricbeat{
         'processes'  => ['.*'],
       },
     ],
-    outputs => {
+    outputs       => {
       'logstash' => {
         'hosts'    => ['logstash:5044'],
       },
-      'enabled' => true,
+      'enabled'  => true,
     }
   }
 }
